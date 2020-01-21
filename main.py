@@ -77,8 +77,8 @@ def find_lyrics_average():
         count = len(lyrics.split())
         ls.append(count)
     most = max(ls)
-    print('The average word count for the top ' + str(song_count) + ' ' + artist_name + ' songs is ' + round(str(
-        average_the_list(ls))), 2)
+    print('The average word count for the top ' + str(song_count) + ' ' + artist_name + ' songs is ' + str(round(
+        average_the_list(ls)), 2))
 
 
 if __name__ == "__main__":
