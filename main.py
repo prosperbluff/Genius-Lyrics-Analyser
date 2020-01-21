@@ -1,15 +1,14 @@
-# Our API token
-GENIUS_API_TOKEN='u3ct344KisrrhJ53FyYnlM-S1mdceHRJBQBCeCXGeejKQ1oiKJy0JKGOcMU5b4aj'
-
 # Packages and libraries
 import requests  # Gives us access to HTML and website requests
 from bs4 import BeautifulSoup  # Input/Output
 import os  # Allow us to search/manipulate strings
 import re  # Regular expressions
 
+# Our API token
+GENIUS_API_TOKEN = 'u3ct344KisrrhJ53FyYnlM-S1mdceHRJBQBCeCXGeejKQ1oiKJy0JKGOcMU5b4aj'
+
 
 # Functions
-
 # This just gives us an average from a list.
 def average_the_list(lst):
     return sum(lst) / len(lst)
@@ -78,6 +77,9 @@ def find_lyrics_average():
         count = len(lyrics.split())
         ls.append(count)
     most = max(ls)
-    print('The average word count for the top ' + str(song_count) + ' ' + artist_name + ' songs is ' + str(average_the_list(ls)))
-    return average_the_list(ls)
+    print('The average word count for the top ' + str(song_count) + ' ' + artist_name + ' songs is ' + round(str(
+        average_the_list(ls))), 2)
 
+
+if __name__ == "__main__":
+    find_lyrics_average()
